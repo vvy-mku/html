@@ -1,0 +1,155 @@
+<html>
+
+<head>
+    <title>My landing page</title>
+    <!--
+        Ця сторінка використовує шрифт Inter, але не системи йомо мають. 
+        Тому черех <link> ми підключаємо стилі що його завантажують на сторінки
+    -->
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            /* 
+            Вказуєм шрифт, ромзір та колір звичайного тексту на сторінці 
+            Надалі, якщо це буде заголовок то розмір ми вкажемо явно для конкретного блоку
+            Якщо це header де буде голубий фон та білий колір тексту, це теж вкажемо окремо для того блоку
+            */
+            font-family: Inter;
+            font-size: 16px;
+            line-height: 24px;
+            color: #272D37;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        header {
+            display: flex;
+            justify-content: center;
+            padding: 20px 0 20px 0;
+
+            /* Вказуєм колір фону та білий колір як основний тому що в header шрифт білий усюди */
+            background-color: #2B63D9;
+            color: #fff;
+
+            border-bottom: 1px solid #648EF7;
+
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        header a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        header a:hover {
+            color: #B2C9FF;
+        }
+
+
+
+        .container {
+            /* Оскільки ширина блоку 1280 а padding-інши справа та зліва по 32 вирахуємо її та вкажемо
+            1280 - 32 -32 = 1216 */
+            width: 1216px;
+            display: flex;
+            flex-direction: row;
+            gap: 64px;
+            align-items: center;
+        }
+
+        .menu {
+            display: flex;
+            gap: 32px;
+        }
+
+
+        .buttons {
+            /* Класс buttons має flex-grow: 1 і буде займати весь доступний простір справа що залишився */
+            flex-grow: 1;
+            display: flex;
+            flex-direction: row;
+            /* Вирівнюємо вкіст (кнопки) до правого краю */
+            justify-content: flex-end;
+            gap: 24px;
+            align-items: center;
+        }
+
+        /* Введемо класс button який будемо використовувати усюди щоб елемент відображався як кнопка */
+        .button {
+            padding: 12px 18px 12px 18px;
+            background: #437EF7;
+            color: #fff;
+            border-radius: 6px;
+
+            font-size: 15px;
+            line-height: 22px;
+            transition: background-color 300ms linear;
+        }
+
+        .button:hover {
+            background: #5390F8;
+            color: #fff;
+            transition: background-color 300ms linear;
+        }
+
+        .main {
+            display: flex;
+            justify-content: center;
+            padding: 48px 0 80px 0;
+
+            background-color: #2B63D9;
+            color: #fff;
+        }
+
+        h1 {
+            font-size: 52px;
+            line-height: 60px;
+            font-weight:
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <img src="./logo.svg" />
+            <div class="menu">
+                <a href="./home">Home</a>
+                <a href="./products">Our Products</a>
+                <a href="./resources">Resources</a>
+                <a href="./contacts">Contacts</a>
+            </div>
+            <div class="buttons">
+                <a href="./login">Log in</a>
+                <a class="button" href="./signup">Sign up</a>
+            </div>
+        </div>
+    </header>
+    <div class="main">
+        <div class="container">
+            <div class="title">
+                <h1>Your Supercharged Design Workflow.</h1>
+                <p class="description">
+                    We’ve been told it is not possible to overachieve our customers’ expectations. We have not
+                    reinvented the wheel, we
+                    decided to build upon it.
+                </p>
+                <a class="button" href="./signup">Get Started</a>
+            </div>
+            <div class="logos"></div>
+        </div>
+    </div>
+    <div></div>
+    <div></div>
+    <footer></footer>
+</body>
+
+</html>
